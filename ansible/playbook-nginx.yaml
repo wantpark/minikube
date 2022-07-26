@@ -1,0 +1,10 @@
+---
+- name: install nginx
+  hosts: webserver #all
+  remote_user: root
+
+  tasks:
+      - name: install nginx latest version
+        ansible.builtin.apt:
+            name: nginx
+            state: latest
