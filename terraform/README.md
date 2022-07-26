@@ -1,9 +1,17 @@
 # Terrform
 
-## 1. 우분투 설치
+## 1. 테라폼 설치
 
 ```text
-sudo su
 
-docker run -d -it --name terrform_server ubuntu:20.04
+```
+
+## 2. 테라폼 실행
+
+```text
+terraform init
+
+terraform plan
+
+terraform
 ```
