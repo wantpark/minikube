@@ -70,10 +70,10 @@ ssh-keygen
 (질문에 대해 모두 엔터 입력)
 
 ssh-copy-id 172.17.0.3
-(worker1에서 변경한 root 암호)
+(worker1에서 입력한 root 암호)
 
 ssh-copy-id 172.17.0.4
-(worker2에서 변경한 root 암호)
+(worker2에서 입력한 root 암호)
 ```
 
 ### 3.2 앤서블 설치
