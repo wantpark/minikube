@@ -5,7 +5,7 @@ metadata:
     labels:
         app: python-data-science-notebook
 spec:
-    type: { { .Values.service.type } }
+    type: {{ .Values.service.type }}
     selector:
         app: python-data-science-notebook
     ports:

@@ -51,7 +51,7 @@ helm create python_data_science
 -   변수 파일 생성
 
 ```text
-cd python_data_science
+cd python_data_science/templates
 
 rm hpa.yaml
 rm ingress.yaml
@@ -62,6 +62,8 @@ rm serviceaccount.yaml
 ### 5.2 주피터 노트북 설치
 
 ```text
+cd ../..
+
 helm install python-data-science-notebook python_data_science
 ```
 

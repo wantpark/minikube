@@ -16,6 +16,6 @@ spec:
         spec:
             containers:
                 - name: python-data-science-container
-                  image: { { .Values.image.name } }
+                  image: {{ .Values.image.name }}
                   ports:
                       - containerPort: 8888
