@@ -3,7 +3,7 @@ replicaCount: 1
 image:
     name: amaksimov/python_data_science
     pullPolicy: IfNotPresent
-    tag: 'latest'
+    tag: "latest"
 
 service:
     type: NodePort

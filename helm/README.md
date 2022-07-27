@@ -61,10 +61,16 @@ rm serviceaccount.yaml
 
 ### 5.2 주피터 노트북 설치
 
+-   주피터 노트북이 설치되고 실행까지 대기
+-   3GB로 인해 타임아웃 발생하면 수동 다운로드
+-   docker pull amaksimov/python_data_science
+
 ```text
 cd ../..
 
 helm install python-data-science-notebook python_data_science
+
+minikube kubectl -- get services
 ```
 
 ### 5.3 주피터 노트북 삭제

@@ -5,7 +5,7 @@ metadata:
     labels:
         app: python-data-science-notebook
 spec:
-    replicas: { { .Values.replicaCount } }
+    replicas: {{ .Values.replicaCount }}
     selector:
         matchLabels:
             app: python-data-science-notebook
