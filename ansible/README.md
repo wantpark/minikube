@@ -3,7 +3,7 @@
 ## 1. 우분투 설치
 
 ```text
-sudo su
+sudo -i
 
 docker run -d -it --name ansible_server ubuntu:20.04
 docker run -d -it --name worker1 -p 8081:80 ubuntu:20.04

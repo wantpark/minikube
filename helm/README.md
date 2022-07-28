@@ -53,10 +53,7 @@ helm create python_data_science
 ```text
 cd python_data_science/templates
 
-rm hpa.yaml
-rm ingress.yaml
-rm NOTES.txt
-rm serviceaccount.yaml
+rm hpa.yaml ingress.yaml NOTES.txt serviceaccount.yaml
 ```
 
 ### 5.2 주피터 노트북 설치

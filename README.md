@@ -79,13 +79,16 @@ echo 'fs.protected_regular = 0' | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 
 sudo sysctl -a | grep fs.protected_regular
+
+sudo crontab -e
+Choose 1-3 [1]: 3 (option)
+
+@reboot /sbin/sysctl --load=/etc/sysctl.conf
 ```
 
 ## 6. minikube 실행
 
 ```text
-sudo sysctl -p
-sudo su
-cd
+sudo -i
 minikube start --driver=none
 ```
