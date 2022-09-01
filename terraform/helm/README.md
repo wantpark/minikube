@@ -24,6 +24,8 @@ helm create mysql-chart
 cd mysql-chart/templates
 
 rm hpa.yaml ingress.yaml NOTES.txt serviceaccount.yaml
+cp ~/minikube/terraform/helm/mysql-chart/templates/* ./
+cp ~/minikube/terraform/helm/mysql-chart/values.yaml ../
 
 cd ../..
 ```
@@ -47,6 +49,8 @@ helm create wordpress-chart
 cd wordpress-chart/templates
 
 rm hpa.yaml ingress.yaml NOTES.txt serviceaccount.yaml
+cp ~/minikube/terraform/helm/wordpress-chart/templates/* ./
+cp ~/minikube/terraform/helm/wordpress-chart/values.yaml ../
 
 cd ../..
 ```
@@ -54,11 +58,14 @@ cd ../..
 ## 3. 테라폼 실행
 
 ```text
+cp ~/minikube/terraform/helm/helm.tf ./
+
 terraform init
 
 terraform plan
 
 terraform apply
+Enter a value: <yes 입력>
 ```
 
 ## 4. 배포 확인

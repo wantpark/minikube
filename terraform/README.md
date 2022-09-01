@@ -21,12 +21,15 @@ sudo apt install terraform -y
 
 ## 2. 테라폼 실행
 
+-   minikube가 실행된 상태
+
 ```text
 terraform init
 
 terraform plan
 
 terraform apply
+Enter a value: <yes 입력>
 ```
 
 ## 3. 배포 확인

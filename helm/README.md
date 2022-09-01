@@ -19,6 +19,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 
 ## 3. wordpress 설치
 
+-   minikube가 실행된 상태
 -   wordpress와 mysql이 설치되고 실행까지 대기
 
 ```text
@@ -54,6 +55,8 @@ helm create python_data_science
 cd python_data_science/templates
 
 rm hpa.yaml ingress.yaml NOTES.txt serviceaccount.yaml
+cp ~/minikube/helm/templates/* ./
+cp ~/minikube/helm/values.yaml ../
 ```
 
 ### 5.2 주피터 노트북 설치
