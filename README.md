@@ -61,7 +61,7 @@ sudo systemctl enable cri-docker.service
 sudo systemctl enable --now cri-docker.socket
 ```
 
-## 4. critest 설치
+## 4. crictl 설치
 
 ```text
 VERSION="v1.24.1"
@@ -91,4 +91,34 @@ Choose 1-3 [1]: 3 (option)
 ```text
 sudo -i
 minikube start --driver=none
+```
+
+## 7. Windows 10
+
+### 7.1 VirtualBox 설치
+
+```text
+https://download.virtualbox.org/virtualbox/6.1.38/VirtualBox-6.1.38-153438-Win.exe
+```
+
+### 7.2 minikube 설치
+
+```text
+https://github.com/kubernetes/minikube/releases/latest/download/minikube-installer.exe
+```
+
+### 7.3 minikube 실행
+
+-   명령 프롬프트 (cmd)에서
+
+```text
+minikube start --driver=virtualbox
+```
+
+### 7.4 대시보드 실행
+
+-   명령 프롬프트 (cmd)에서
+
+```text
+minikube dashboard --url=true
 ```
