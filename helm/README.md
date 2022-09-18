@@ -26,6 +26,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm install wordpress bitnami/wordpress --set service.type=NodePort
 
 minikube kubectl -- get services
+microk8s kubectl get services
 ```
 
 ## 4. wordpress 삭제
@@ -71,6 +72,7 @@ cd ../..
 helm install python-data-science-notebook python_data_science
 
 minikube kubectl -- get services
+microk8s kubectl get services
 ```
 
 ### 5.3 주피터 노트북 삭제

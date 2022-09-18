@@ -122,3 +122,51 @@ minikube start --driver=virtualbox
 ```text
 minikube dashboard --url=true
 ```
+
+## 8. microk8s
+
+### 8.1 설치
+
+```text
+sudo snap install microk8s --classic
+```
+
+### 8.2 방화벽
+
+```text
+sudo ufw allow in on cni0 && sudo ufw allow out on cni0
+sudo ufw default allow routed
+```
+
+### 8.3 그룹 설정
+
+```text
+sudo usermod -a -G microk8s $USER
+sudo chown -f -R $USER ~/.kube
+```
+
+```text
+su - $USER
+```
+
+### 8.4 실행
+
+```text
+microk8s start
+
+microk8s kubectl config view --raw > ~/.kube/config
+```
+
+```text
+microk8s kubectl get all --all-namespaces
+```
+
+### 8.5 애드온 실행
+
+```text
+microk8s enable dns dashboard storage
+```
+
+```text
+microk8s enable metallb ingress
+```
