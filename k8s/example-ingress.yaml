@@ -9,7 +9,7 @@ spec:
     - host: hello-world.info
       http:
         paths:
-          - path: /v
+          - path: /
             pathType: Prefix
             backend:
               service:
