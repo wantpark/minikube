@@ -21,7 +21,7 @@ sudo apt install terraform -y
 
 ## 2. 테라폼 실행
 
--   minikube 또는 microk8s가 실행된 상태
+- minikube 또는 microk8s가 실행된 상태
 
 ```text
 terraform init

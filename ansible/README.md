@@ -14,11 +14,11 @@ docker run -d -it --name worker2 -p 8082:80 ubuntu:20.04
 
 ### 2.1 ssh 서버 설치
 
--   ssh 서버 설치시 지역은 Asia/Seoul 선택
-    -   Geograpic area: 6
-    -   [More] Enter
-    -   Time zone: 69
--   worker2도 동일하게 진행 (2.1부터 2.3 까지)
+- ssh 서버 설치시 지역은 Asia/Seoul 선택
+  - Geograpic area: 6
+    - [More] Enter
+    - Time zone: 69
+- worker2도 동일하게 진행 (2.1부터 2.3 까지)
 
 ```text
 docker exec -it worker1 /bin/bash
@@ -49,8 +49,8 @@ exit
 
 ### 2.4 worker IP 주소 확인
 
--   "IPAddress": "172.17.0.3" (환경마다 다름)
--   "IPAddress": "172.17.0.4"
+- "IPAddress": "172.17.0.3" (환경마다 다름)
+- "IPAddress": "172.17.0.4"
 
 ```text
 docker inspect worker1
@@ -61,8 +61,8 @@ docker inspect worker2
 
 ### 3.1 ssh 키 복사
 
--   대상 클라이언트에 비밀번호 대신 키로 접속하기 위해
--   ssh-copy-id 172.17.0.3 (환경마다 다름)
+- 대상 클라이언트에 비밀번호 대신 키로 접속하기 위해
+- ssh-copy-id 172.17.0.3 (환경마다 다름)
 
 ```text
 docker exec -it ansible_server /bin/bash
@@ -90,8 +90,8 @@ ansible --version
 
 ### 3.3 인벤토리
 
--   인벤토리(hosts 파일)에 worker 정보 설정
--   플레이북 hosts 참조(webserver)
+- 인벤토리(hosts 파일)에 worker 정보 설정
+- 플레이북 hosts 참조(webserver)
 
 ```text
 echo '[webserver]' | tee -a /etc/ansible/hosts
@@ -107,8 +107,8 @@ ansible -m ping all
 
 ### 3.5 플레이북
 
--   NGINX 설치
--   playbook-nginx.yaml 파일 생성
+- NGINX 설치
+- playbook-nginx.yaml 파일 생성
 
 ```text
 ansible-playbook playbook-nginx.yaml
@@ -118,7 +118,7 @@ exit
 
 ### 3.6 NGINX 설치 확인
 
--   worker2도 확인
+- worker2도 확인
 
 ```text
 docker exec -it worker1 /bin/bash

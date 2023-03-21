@@ -19,8 +19,8 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 
 ## 3. wordpress 설치
 
--   minikube가 실행된 상태
--   wordpress와 mysql이 설치되고 실행까지 대기
+- minikube가 실행된 상태
+- wordpress와 mysql이 설치되고 실행까지 대기
 
 ```text
 helm install wordpress bitnami/wordpress --set service.type=NodePort
@@ -47,10 +47,10 @@ helm create python_data_science
 
 #### 5.1.2 차트 만들기
 
--   불필요한 파일 삭제
--   배포 파일 생성
--   서비스 파일 생성
--   변수 파일 생성
+- 불필요한 파일 삭제
+- 배포 파일 생성
+- 서비스 파일 생성
+- 변수 파일 생성
 
 ```text
 cd python_data_science/templates
@@ -62,9 +62,9 @@ cp ~/minikube/helm/values.yaml ../
 
 ### 5.2 주피터 노트북 설치
 
--   주피터 노트북이 설치되고 실행까지 대기
--   3GB로 인해 타임아웃 발생하면 수동 다운로드
--   docker pull amaksimov/python_data_science
+- 주피터 노트북이 설치되고 실행까지 대기
+- 3GB로 인해 타임아웃 발생하면 수동 다운로드
+- docker pull amaksimov/python_data_science
 
 ```text
 cd ../..

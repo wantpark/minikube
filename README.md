@@ -109,7 +109,7 @@ https://github.com/kubernetes/minikube/releases/latest/download/minikube-install
 
 ### 7.3 minikube 실행
 
--   명령 프롬프트 (cmd)에서
+- 명령 프롬프트 (cmd)에서
 
 ```text
 minikube start --driver=virtualbox
@@ -117,7 +117,7 @@ minikube start --driver=virtualbox
 
 ### 7.4 대시보드 실행
 
--   명령 프롬프트 (cmd)에서
+- 명령 프롬프트 (cmd)에서
 
 ```text
 minikube dashboard --url=true
