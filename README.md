@@ -93,6 +93,17 @@ sudo -i
 minikube start --driver=none
 ```
 
+### 6.1 x509
+
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate has expired or is not yet valid
+
+- <https://github.com/kubernetes/minikube/issues/13621>
+- Tushar255 commented on Jul 28, 2022
+
+```text
+minikube delete --all --purge
+```
+
 ## 7. Windows 10
 
 ### 7.1 VirtualBox 설치
@@ -164,9 +175,20 @@ microk8s kubectl get all --all-namespaces
 ### 8.5 애드온 실행
 
 ```text
-microk8s enable dns dashboard storage
+microk8s enable dns
+microk8s enable dashboard
+microk8s enable storage
+microk8s enable metallb
+microk8s enable ingress
+```
+
+### 8.6 대시보드  실행
+
+```text
+token=$(microk8s kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
+microk8s kubectl -n kube-system describe secret $token
 ```
 
 ```text
-microk8s enable metallb ingress
+microk8s dashboard-proxy
 ```
