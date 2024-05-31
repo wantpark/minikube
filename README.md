@@ -192,3 +192,11 @@ microk8s kubectl -n kube-system describe secret $token
 ```text
 microk8s dashboard-proxy
 ```
+
+### 8.7 x509
+
+```text
+sudo microk8s stop
+sudo microk8s refresh-certs --cert ca.crt
+sudo microk8s start
+```
