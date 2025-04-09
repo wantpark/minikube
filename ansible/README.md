@@ -77,7 +77,7 @@ ssh-copy-id 172.17.0.3
 (yes 입력 후 worker1에서 입력한 root 암호)
 
 ssh-copy-id 172.17.0.4
-(ssh-copy-id 172.17.0.4worker2에서 입력한 root 암호)
+(yes 입력 후 worker2에서 입력한 root 암호)
 ```
 
 ### 3.2 앤서블 설치
